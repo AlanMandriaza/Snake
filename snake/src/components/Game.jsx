@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Board from './Board';
+
+
+import Snake from './Snake';
+import Food from './Food';
+
 import './Game.css';
 
 const Game = () => {
