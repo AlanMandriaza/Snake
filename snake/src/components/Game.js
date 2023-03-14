@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Board from './Board';
 
-
-import Snake from './Snake';
-import Food from './Food';
-
-import './Game.css';
-
 const Game = () => {
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
   const [direction, setDirection] = useState('right');
@@ -101,7 +95,7 @@ const Game = () => {
   function gameOver() {
     setGameOver(true);
   }
-
+  
   function restartGame() {
     setSnake([{ x: 10, y: 10 }]);
     setDirection('right');
@@ -110,7 +104,7 @@ const Game = () => {
     setSpeed(200);
     setGameOver(false);
   }
-
+  
   useEffect(() => {
     const timerId = setInterval(() => moveSnake(), speed);
     document.addEventListener('keydown', handleKeyPress);
@@ -119,7 +113,7 @@ const Game = () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
   }, [snake, direction, food, score, speed, gameOver]);
-
+  
   return (
     <div className="game-container">
       <h1 className="title">Snake</h1>
@@ -133,8 +127,5 @@ const Game = () => {
         </div>
       )}
     </div>
-  );
-};
-
-export default Game;
-
+  );}
+  export default Game;

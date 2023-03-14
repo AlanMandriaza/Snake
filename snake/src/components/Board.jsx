@@ -1,6 +1,6 @@
 import React from 'react';
-import Snake from './Snake';
-import './Board.css';
+import Snake from './Snake.jsx';
+
 
 const Board = ({ snake, food }) => {
     const renderCells = () => {
