@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Board from './Board.jsx';
+import Board from './Board';
 import './Game.css';
 
 const Game = () => {
